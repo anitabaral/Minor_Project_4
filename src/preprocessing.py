@@ -6,6 +6,7 @@ from nltk import word_tokenize
 from unidecode import unidecode
 from nltk.corpus import stopwords
 
+from .load_data import LoadFile
 
 class Preprocessing:
     def __init__(self):

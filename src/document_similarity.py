@@ -3,10 +3,10 @@ import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.metrics.pairwise import euclidean_distances
 
-from .Embeddings import Embeddings
-from .Load_data import LoadFile
+from .embedding import Embeddings
+from .load_data import LoadFile
 
-class Document_similarity:
+class DocumentSimilarity:
     def __init__(self):
         pass
     
@@ -18,7 +18,7 @@ class Document_similarity:
 
         return euclidean_distances(document_embeddings)
     
-    def most_similar(news_dataframe, oc_id, top_similar, similarity_matrix, matrix):
+    def most_similar(news_dataframe, doc_id, top_similar, similarity_matrix, matrix):
             print (f'Document: {news_dataframe.iloc[doc_id]["Initial_corpus"]}')
             print ('\n')
             print ('Similar Documents:')
