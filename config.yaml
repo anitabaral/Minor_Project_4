@@ -1,0 +1,2 @@
+model_loc: model/GoogleNews-vectors-negative300.bin.gz
+data_loc: data/reut2-021.sgm
