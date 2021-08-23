@@ -15,24 +15,23 @@ def most_similar(data_path, model_path, doc_id, matrix):
             matrix (str) = The string that specifies whether to use euclidean distance or cosine similarity
 
         Returns:
-            None
+            object: list of top 5 similar articles
     """
+    similar_articles = []
     articles = LoadFile(data_path).news_dataframe()
     similar_docs = SimilarDocuments(data_path, model_path)
-    print(f'Document: {articles.iloc[doc_id]["Initial_corpus"]}')
-    print("\n")
-    print("Similar Documents:")
+
     if matrix == "Cosine Similarity":
         similarity_matrix = similar_docs.pairwise_similarities()
         similar_ix = np.argsort(similarity_matrix[doc_id])[::-1]
     elif matrix == "Euclidean Distance":
         similarity_matrix = similar_docs.pairwise_differences()
         similar_ix = np.argsort(similarity_matrix[doc_id])
-    for index in range(5):
+    else:
+        raise ValueError('The similarity cannot be performed')
+    for index in range(6):
         if index == doc_id:
             continue
-        print("\n")
-        print(f'Document: {articles.iloc[index]["Initial_corpus"]}')
-        print(f"{matrix} : {similarity_matrix[doc_id][index]}")
+        similar_articles.append(articles.iloc[index]["Initial_corpus"])
 
-    return None
+    return similar_articles
