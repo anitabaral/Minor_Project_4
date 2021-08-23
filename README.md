@@ -3,7 +3,7 @@
 <h4> The project is to find the top most 5 similar articles from a given news article dataset <h4>
 
 <h5> Implementation details 
-
+<br>
 > Load model: load_model.py 
 
 > Load data: load_data.py 
