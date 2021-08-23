@@ -1,17 +1,20 @@
-import sys
-sys.path.append('..')
 from pathlib import Path
 
 import gensim
 
-class LoadModel:
-    def __init__(self):
-        self.this_dir, self.this_file = os.path.split(__file__)
-    
+
+class PretrainedModels:
+    def __init__(self, model_path):
+
+        self.model_path = model_path
+
     def gensim_model(self):
-        
-        data_folder = Path(self.this_dir)
-        file_path = data_folder / "model" / "GoogleNews-vectors-negative300.bin.gz"
-        model_w2v = gensim.models.KeyedVectors.load_word2vec_format(file_path, binary=True)
+
+        model_w2v = gensim.models.KeyedVectors.load_word2vec_format(
+            self.model_path, binary=True
+        )
 
         return model_w2v
+
+    def glove_model(self):
+        pass
