@@ -2,6 +2,8 @@ import re
 import string
 
 import nltk
+nltk.download('stopwords')
+nltk.download('punkt')
 from nltk import word_tokenize
 from unidecode import unidecode
 from nltk.corpus import stopwords
