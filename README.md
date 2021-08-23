@@ -4,8 +4,13 @@
 
 <h5> Implementation details 
 > Load model: load_model.py 
+
 > Load data: load_data.py 
+
 > Data preparation: preprocessing.py 
+
 > Feature Extraction: embedding.py 
+
 > Calculating similarities: document_similarity.py 
+
 > Printing top articles: view_similar_articles.py 
