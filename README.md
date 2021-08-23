@@ -18,15 +18,11 @@
 
 <h4> Steps to run the repo </h4>
 
-- Clone the repository: git clone  https://github.com/anitabaral/Minor_Project_4.git
-- Install pipenv
+- git clone
 
 <h5>1. pipenv setup </h5>
 
-  - Go to the project folder 
-  - Open terminal 
-  - Run the command: pipenv shell 
-  - Install all the components specified in the Pipfile.
+ - Install dependencies: pipenv install --skip-lock
 
  <h5>2. Model setup </h5>
  
