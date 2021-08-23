@@ -16,5 +16,3 @@ class PretrainedModels:
 
         return model_w2v
 
-    def glove_model(self):
-        pass
