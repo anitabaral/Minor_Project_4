@@ -5,13 +5,11 @@ from text_similarity import LoadFile, PretrainedModels, preprocess_corpus, Embed
 with open("config.yaml", "r") as stream:
     file_paths = yaml.safe_load(stream)
 
-def main():
+if __name__ == "__main__":
 
-    # Embeddings(file_paths['data_loc'], file_paths['model_loc'])
     SimilarDocuments(file_paths['data_loc'], file_paths['model_loc'])
-    print(most_similar(file_paths['data_loc'],  file_paths['model_loc'], 0,'Cosine Similarity'))
-    # most_similar(0,'Euclidean Distance')
+    id = input('Enter the document id.')
+    print(most_similar(file_paths['data_loc'],  file_paths['model_loc'], id,'Cosine Similarity'))
 
     
 
-main()
